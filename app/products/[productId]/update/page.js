@@ -16,7 +16,7 @@ export default function ParametersPage({ params }) {
       </Button>
 
       <h1 className="font-bold text-3xl md:text-4xl text-center mt-20 md:mt-10 ">
-        Paramètres du produit
+        Modifier le produit
       </h1>
 
       <div className="w-full max-w-4xl bg-white dark:bg-zinc-800 rounded-2xl shadow-lg overflow-hidden p-6 mt-12">

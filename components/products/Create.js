@@ -58,7 +58,7 @@ export default function CreateProduct({}) {
             className={`relative rounded-lg overflow-hidden border-2 transition 
               ${
                 product.imageUrl === img
-                  ? "border-cyan-600 shadow-lg shadow-zinc-300"
+                  ? "border-cyan-600 shadow-lg shadow-zinc-300 dark:shadow-zinc-900"
                   : "border-transparent"
               }`}
           >

@@ -41,11 +41,6 @@ export default function ProductParameters({ onClose, productId }) {
     }
   };
 
-  // const handleChange = (field, value) => {
-  //   setEditableProduct({ ...editableProduct, [field]: value });
-  //   if (success) setSuccess(false);
-  // };
-
   return (
     <div className="space-y-4 p-2">
       <label htmlFor="name">Nom du produit</label>
@@ -75,7 +70,7 @@ export default function ProductParameters({ onClose, productId }) {
             className={`relative rounded-lg overflow-hidden border-2 transition 
               ${
                 editableProduct.imageUrl === img
-                  ? "border-cyan-600 shadow-lg shadow-zinc-300"
+                  ? "border-cyan-600 shadow-lg shadow-zinc-300 dark:shadow-zinc-900"
                   : "border-transparent"
               }`}
           >

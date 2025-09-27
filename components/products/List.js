@@ -58,7 +58,7 @@ export default function productsList() {
       {/* Bouton flottant */}
       <div className="sm:hidden fixed bottom-6 right-6">
         <Link href="/products/new">
-          <Button className="w-20 h-20 ring-2 ring-white shadow-lg shadow-purple-600/50">
+          <Button className="w-20 h-20 ring-2 ring-white shadow-lg shadow-cyan-600/50">
             <PlusIcon className="size-9"></PlusIcon>
           </Button>
         </Link>
