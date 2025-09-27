@@ -10,14 +10,7 @@ import { useState } from "react";
 
 import { validateProduct } from "@/utils/validateProduct";
 
-const productImages = [
-  "/images/product1.jpg",
-  "/images/product2.jpg",
-  "/images/product3.jpg",
-  "/images/product4.jpg",
-  "/images/product5.jpg",
-  "/images/product6.jpg",
-];
+const productImages = ["/images/product1.jpg", "/images/product2.jpg"];
 
 export default function CreateProduct({}) {
   const dispatch = useDispatch();
@@ -33,7 +26,7 @@ export default function CreateProduct({}) {
     if (isValid) {
       const action = await dispatch(createProduct(product));
       if (createProduct.fulfilled.match(action)) {
-        router.push(`/products/${action.payload._id}`);
+        router.push(`/products/`);
       }
     }
   };
@@ -78,7 +71,7 @@ export default function CreateProduct({}) {
         ))}
       </div>
 
-      <Button onClick={handleCreateProduct} className="my-4">
+      <Button onClick={handleCreateProduct} className="mt-10">
         Créer le produit
       </Button>
     </div>

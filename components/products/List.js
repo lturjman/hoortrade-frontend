@@ -19,7 +19,7 @@ export default function productsList() {
 
   if (loading) return <div>Chargement...</div>;
   return (
-    <div className="p-4 space-y-6">
+    <div className="p-4 space-y-6 mt-4">
       {products.length === 0 ? (
         // Cas où il n'y a aucun produit
         <div className="flex flex-col items-center justify-center min-h-[70vh] w-full px-6 space-y-8 ">
@@ -44,7 +44,7 @@ export default function productsList() {
 
             {/* Carte d'ajout en fin de liste */}
             <Link href="/products/new">
-              <div className="hidden sm:flex h-full w-full  cursor-pointer transition-transform hover:scale-105 duration-300 ease-in-out flex-col items-center justify-center border-2 border-dashed border-white/60 backdrop-blur-md rounded-lg text-white hover:border-cyan-600 hover:text-purple-200 p-6 shadow-inner">
+              <div className="hidden sm:flex h-full w-full  cursor-pointer transition-transform hover:scale-105 duration-300 ease-in-out flex-col items-center justify-center border-2 border-dashed backdrop-blur-md rounded-lg hover:text-cyan-500 hover:border-cyan-500 p-6 shadow-inner">
                 <PlusIcon className="w-10 h-10" />
                 <span className="mt-3 font-medium text-lg text-center">
                   Ajouter un produit
