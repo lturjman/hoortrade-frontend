@@ -21,8 +21,8 @@ export default function ProductCard({ product }) {
           {product.name}
         </h2>
 
-        <Button href={`/products/${product._id}`} className="w-full">
-          Voir le produit
+        <Button href={`/products/${product._id}/update`} className="w-full">
+          Modifier le produit
         </Button>
       </div>
     </div>
