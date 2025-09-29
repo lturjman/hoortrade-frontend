@@ -62,12 +62,17 @@ export default function RegisterForm() {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ username, email, password }),
+      body: JSON.stringify({ firstname, lastname, email, password }),
     });
     const data = await res.json();
 
     if (!res.ok) {
-      const newErrors = { username: "", email: "", password: "" };
+      const newErrors = {
+        firstname: "",
+        lastname: "",
+        email: "",
+        password: "",
+      };
 
       if (data?.field === "firstname") {
         newErrors.firstname = "Ce prénom n'est pas valide";
@@ -87,7 +92,7 @@ export default function RegisterForm() {
     // Stocker le token
     localStorage.setItem("token", data.token);
 
-    router.push("/groups");
+    router.push("/products");
   };
 
   return (
