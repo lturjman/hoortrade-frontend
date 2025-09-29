@@ -5,7 +5,6 @@ export default function UpdateProductPage({ params }) {
 
   return (
     <main className="min-h-screen flex flex-col items-center justify-center p-4">
-      {/* Le composant Update est côté client */}
       <UpdateProduct productId={productId} />
     </main>
   );

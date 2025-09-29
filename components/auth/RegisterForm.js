@@ -89,7 +89,6 @@ export default function RegisterForm() {
       return;
     }
 
-    // Stocker le token
     localStorage.setItem("token", data.token);
 
     router.push("/products");
