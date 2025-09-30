@@ -6,6 +6,7 @@ import Button from "@/components/Button";
 const NEXT_PUBLIC_API_URL = process.env.NEXT_PUBLIC_API_URL;
 
 export default function RegisterForm() {
+  const router = useRouter();
   const [firstname, setFirstname] = useState("");
   const [lastname, setLastname] = useState("");
   const [email, setEmail] = useState("");
