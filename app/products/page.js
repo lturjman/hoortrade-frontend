@@ -1,5 +1,6 @@
 import Link from "next/link";
 import ProductsList from "@/components/products/List";
+import LogoutButton from "@/components/auth/LogoutButton";
 
 export default function Login() {
   return (
@@ -12,6 +13,7 @@ export default function Login() {
         </Link>
 
         <ProductsList />
+        <LogoutButton />
       </div>
     </main>
   );

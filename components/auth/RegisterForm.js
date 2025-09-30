@@ -32,7 +32,7 @@ export default function RegisterForm() {
     }
 
     if (!email) {
-      newErrors.email = "L'email n'est pas valide";
+      newErrors.email = "L'email est obligatoire";
       valid = false;
     } else {
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -43,15 +43,13 @@ export default function RegisterForm() {
     }
 
     if (!password) {
-      newErrors.password = "Le mot de passe n'est pas valide";
+      newErrors.password = "Le mot de passe est obligatoire";
       valid = false;
     }
 
     setErrors(newErrors);
     return valid;
   };
-
-  const router = useRouter();
 
   const handleRegister = async (e) => {
     e.preventDefault();
@@ -79,10 +77,13 @@ export default function RegisterForm() {
       } else if (data?.field === "lastname") {
         newErrors.lastname = "Ce nom n'est pas valide";
       } else if (data?.field === "email") {
-        newErrors.email = "Cet email n'est pas valide";
-      } else {
         newErrors.email = "L'email n'est pas valide";
+      } else if (data?.field === "password") {
         newErrors.password = "Le mot de passe n'est pas valide";
+      }
+
+      if (data?.msg?.toLowerCase().includes("existe déjà")) {
+        newErrors.email = "L'email existe déjà";
       }
 
       setErrors(newErrors);
@@ -90,7 +91,6 @@ export default function RegisterForm() {
     }
 
     localStorage.setItem("token", data.token);
-
     router.push("/products");
   };
 
