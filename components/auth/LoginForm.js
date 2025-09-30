@@ -19,12 +19,15 @@ export default function LoginForm() {
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    if (!email || !emailRegex.test(email)) {
+    if (!email) {
+      newErrors.email = "L'email est obligatoire";
+      valid = false;
+    } else if (!emailRegex.test(email)) {
       newErrors.email = "L'email n'est pas valide";
       valid = false;
     }
     if (!password) {
-      newErrors.password = "Le mot de passe n'est pas valide";
+      newErrors.password = "Le mot de passe est obligatoire";
       valid = false;
     }
 
@@ -33,6 +36,8 @@ export default function LoginForm() {
   };
 
   const handleLogin = async (e) => {
+    const newErrors = { email: "", password: "" };
+
     e.preventDefault();
     if (!validateForm()) return;
 
@@ -47,10 +52,11 @@ export default function LoginForm() {
     const data = await res.json();
 
     if (!res.ok) {
-      setErrors({
-        email: "L'email n'est pas valide",
-        password: "Le mot de passe n'est pas valide",
-      });
+      if (res.status === 400) {
+        setErrors({ email: "", password: "Mot de passe incorrect" });
+      } else {
+        setErrors({ email: "", password: "Une erreur est survenue" });
+      }
       return;
     }
 
