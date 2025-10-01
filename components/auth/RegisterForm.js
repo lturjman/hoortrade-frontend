@@ -111,7 +111,7 @@ export default function RegisterForm() {
             onChange={(e) => setFirstname(e.target.value)}
             required
             className="appearance-none w-full p-2 focus:border rounded-md
-             bg-zinc-100 text-zinc-800 focus:outline-none
+             bg-white text-zinc-800 focus:outline-none
              focus:ring-1 focus:ring-cyan-600 focus:border-cyan-600 dark:bg-zinc-600 dark:text-zinc-200"
           />
           {errors.firstname && (
@@ -128,7 +128,7 @@ export default function RegisterForm() {
             onChange={(e) => setLastname(e.target.value)}
             required
             className="appearance-none w-full p-2 focus:border rounded-md
-             bg-zinc-100 text-zinc-800 focus:outline-none
+             bg-white text-zinc-800 focus:outline-none
              focus:ring-1 focus:ring-cyan-600 focus:border-cyan-600 dark:bg-zinc-600 dark:text-zinc-200"
           />
           {errors.lastname && (
@@ -145,7 +145,7 @@ export default function RegisterForm() {
             onChange={(e) => setEmail(e.target.value)}
             required
             className="appearance-none w-full p-2 focus:border rounded-md
-             bg-zinc-100 text-zinc-800 focus:outline-none
+             bg-white text-zinc-800 focus:outline-none
              focus:ring-1 focus:ring-cyan-600 focus:border-cyan-600 dark:bg-zinc-600 dark:text-zinc-200"
           />
           {errors.email && (
@@ -162,7 +162,7 @@ export default function RegisterForm() {
             onChange={(e) => setPassword(e.target.value)}
             required
             className="appearance-none w-full p-2 focus:border rounded-md
-             bg-zinc-100 text-zinc-800 focus:outline-none
+             bg-white text-zinc-800 focus:outline-none
              focus:ring-1 focus:ring-cyan-600 focus:border-cyan-600 dark:bg-zinc-600 dark:text-zinc-200"
           />
           {errors.password && (

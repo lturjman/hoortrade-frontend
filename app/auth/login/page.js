@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Login() {
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center p-4 space-y-6 bg-zinc-50">
+    <div className="flex flex-col items-center justify-center space-y-6 pt-6 min-h-[90vh]">
       <div>
         <Link href="/">
           <h1 className="text-4xl font-bold">Hoortrade</h1>
@@ -12,6 +12,6 @@ export default function Login() {
 
       <h2 className="text-xl font-bold">Connexion</h2>
       <LoginForm />
-    </main>
+    </div>
   );
 }

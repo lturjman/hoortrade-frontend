@@ -32,13 +32,13 @@ export default function CreateProduct({}) {
   };
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-4 max-w-lg mx-auto">
       <label htmlFor="name">Nom du produit</label>
       <input
         type="text"
         name="name"
         className=" mt-2 appearance-none w-full p-2 focus:border rounded-md
-             bg-zinc-100 text-zinc-800 focus:outline-none
+             bg-white text-zinc-800 focus:outline-none
              focus:ring-1 focus:ring-cyan-600 focus:border-cyan-600 dark:bg-zinc-600 dark:text-zinc-200"
         placeholder="Portail"
         value={product.name}
@@ -49,7 +49,7 @@ export default function CreateProduct({}) {
       )}
 
       <label className="block mb-2">Choisir l'image du produit :</label>
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-4">
+      <div className="grid grid-cols-2 gap-3 mb-4">
         {productImages.map((img) => (
           <button
             type="button"
@@ -65,7 +65,7 @@ export default function CreateProduct({}) {
             <img
               src={img}
               alt="Option de produit"
-              className="w-full h-[15vh] md:h-[20vh] object-cover"
+              className="w-full object-contain"
             />
           </button>
         ))}

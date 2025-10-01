@@ -42,13 +42,13 @@ export default function ProductParameters({ onClose, productId }) {
   };
 
   return (
-    <div className="space-y-4 p-2">
+    <div className="space-y-4 max-w-lg mx-auto">
       <label htmlFor="name">Nom du produit</label>
       <input
         type="text"
         name="name"
         className="appearance-none w-full p-2 focus:border rounded-md
-             bg-zinc-100 text-zinc-800 focus:outline-none
+             bg-white text-zinc-800 focus:outline-none
              focus:ring-1 focus:ring-cyan-600 focus:border-cyan-600 dark:bg-zinc-600 dark:text-zinc-200"
         placeholder="Portail"
         value={editableProduct.name}
@@ -77,7 +77,7 @@ export default function ProductParameters({ onClose, productId }) {
             <img
               src={img}
               alt="Option de produit"
-              className="w-full h-[15vh] md:h-[20vh] object-cover"
+              className="w-full object-contain"
             />
           </button>
         ))}

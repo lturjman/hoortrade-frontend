@@ -4,8 +4,8 @@ export default function UpdateProductPage({ params }) {
   const { productId } = params;
 
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center p-4">
+    <div className="flex flex-col items-center justify-center">
       <UpdateProduct productId={productId} />
-    </main>
+    </div>
   );
 }

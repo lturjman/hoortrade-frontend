@@ -3,12 +3,12 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center p-4 space-y-6 bg-zinc-50">
+    <div className="flex flex-col items-center justify-center space-y-6 pt-6 min-h-[90vh]">
       <h1 className="text-4xl font-bold text-center mt-10">
         Hoortrade Product Manager
       </h1>
 
-      <div className="w-full max-w-[70vh] space-y-4">
+      <div className="w-full max-w-xl space-y-6">
         <div className=" bg-white flex flex-col rounded-2xl shadow-lg overflow-hidden text-center p-5 dark:bg-zinc-800">
           <div className="text-xl font-bold">Bienvenue!</div>
           <div className=" ">

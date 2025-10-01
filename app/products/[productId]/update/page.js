@@ -6,20 +6,19 @@ export default function ParametersPage({ params }) {
   const productId = params.productId;
 
   return (
-    <div className="min-h-screen bg-zinc-200 dark:bg-zinc-600 p-4 flex flex-col items-center relative">
+    <div className="p-6">
       <Button
         href={`/products`}
         rounded="true"
-        className="absolute left-4 top-4"
+        className="absolute top-[12vh] left-6"
       >
         <ArrowLeftIcon className="size-5 text-white" />
       </Button>
+      <div className="flex items-center justify-center flex-col min-h-[80vh]">
+        <h1 className="text-2xl font-bold mb-6 text-center">
+          Modifier le produit
+        </h1>
 
-      <h1 className="font-bold text-3xl md:text-4xl text-center mt-20 md:mt-10 ">
-        Modifier le produit
-      </h1>
-
-      <div className="w-full max-w-4xl bg-white dark:bg-zinc-800 rounded-2xl shadow-lg overflow-hidden p-6 mt-12">
         <ProductParameters productId={productId} />
       </div>
     </div>
