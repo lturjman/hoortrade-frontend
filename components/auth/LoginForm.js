@@ -1,13 +1,24 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Button from "@/components/Button";
 import { useRouter } from "next/navigation";
+
+import { useDispatch } from "react-redux";
+import { fetchMe } from "@/lib/store/slices/users";
 
 const NEXT_PUBLIC_API_URL = process.env.NEXT_PUBLIC_API_URL;
 
 export default function LoginForm() {
   const router = useRouter();
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (token) {
+      router.replace("/products");
+    }
+  }, [router]);
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -61,7 +72,7 @@ export default function LoginForm() {
     }
 
     localStorage.setItem("token", data.token);
-
+    await dispatch(fetchMe());
     router.push("/products");
   };
 

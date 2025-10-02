@@ -7,7 +7,10 @@ export default function AuthLoader() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchMe());
+    const token = localStorage.getItem("token");
+    if (token) {
+      dispatch(fetchMe());
+    }
   }, [dispatch]);
 
   return null;

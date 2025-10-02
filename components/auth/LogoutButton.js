@@ -17,22 +17,9 @@ export default function LogoutForm() {
     dispatch(clearUsers());
     e.preventDefault();
 
-    const res = await fetch(`${NEXT_PUBLIC_API_URL}/auth/logout`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${localStorage.getItem("token")}`,
-      },
-    });
-
-    if (!res.ok) {
-      error;
-      return;
-    }
-
     localStorage.removeItem("token");
 
-    router.push("/auth/login");
+    router.push("/");
   };
 
   return (
